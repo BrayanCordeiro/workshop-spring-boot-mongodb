@@ -21,7 +21,7 @@ public class UserService {
 		return repository.findAll();
 	}
 	
-	public User findByid(String id) {
+	public User findById(String id) {
 		
 		return repository.findById(id)
 				.orElseThrow(() -> new ObjectNotFoundException("Object not found!"));
@@ -31,8 +31,14 @@ public class UserService {
 		return repository.insert(usuario);
 	}
 	
+	public void deleteUser(String id) {
+		findById(id);
+		repository.deleteById(id);
+	}
+	
 	public User fromDTO(UserDTO usuarioDTO) {
 		return new User(usuarioDTO.getId(), usuarioDTO.getName(), usuarioDTO.getEmail());
 	}
+	
 
 }
