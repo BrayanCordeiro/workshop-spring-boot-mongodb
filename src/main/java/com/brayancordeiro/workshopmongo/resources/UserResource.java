@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.brayancordeiro.workshopmongo.domain.Post;
 import com.brayancordeiro.workshopmongo.domain.User;
 import com.brayancordeiro.workshopmongo.dto.UserDTO;
 import com.brayancordeiro.workshopmongo.services.UserService;
@@ -28,7 +28,7 @@ public class UserResource {
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping(method=RequestMethod.GET)
+	@GetMapping
 	public ResponseEntity<List<UserDTO>> findAll(){
 		
 		List<User> usuarios = service.findAll();
@@ -71,6 +71,13 @@ public class UserResource {
 		service.deleteUser(id);
 		
 		return ResponseEntity.noContent().build();	
+	}
+	
+	@GetMapping(value="/{id}/posts")
+	public ResponseEntity<List<Post>> findPosts(@PathVariable String id){
+		User usuario = service.findById(id);
+		
+		return ResponseEntity.ok().body(usuario.getPosts());
 	}
 	
 }
