@@ -1,7 +1,12 @@
 # workshop-spring-boot-mongodb
 
-Neste projeto viso desenvolver um sistema simples para aprendizado proprio onde possam ser realizadas consultas com SpringBoot em um banco de dados NoSql, nesse caso, o banco utilizado é o Mongodb. As consultas envolvem postagens elaboradas por usuarios que possam ser comentadas por outos usuarios ou pelo mesmo.
+Sistema simples desenvolvido para aprendizado proprio onde possam ser realizadas consultas elaboradas com SpringBoot em um banco de dados NoSql. As consultas envolvem postagens feitas por usuarios, outros usuarios podem comentar essas postagens ou realizar as suas próprias.
 
+## 📋 Requisitos para testes
+
+* Java 21
+* Banco de dados não relacional
+* STS4 ou IDE configurada para Spring
 
 ## 🛠️ Ferramentas utilizadas até o momento
 
