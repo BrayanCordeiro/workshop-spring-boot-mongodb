@@ -1,12 +1,12 @@
 # workshop-spring-boot-mongodb
-Sistema simples desenvolvido para aprendizado proprio onde possam ser realizadas consultas elaboradas com SpringBoot em um banco de dados NoSql. As consultas envolvem postagens feitas por usuarios, outros usuarios podem comentar essas postagens ou realizar as suas próprias.
+Sistema simples desenvolvido para aprendizado proprio onde possam ser realizadas consultas elaboradas com SpringBoot em um banco de dados NoSql. As consultas envolvem postagens feitas por usuários, outros usuários podem comentar essas postagens ou realizar as suas próprias.
 
 ## Funcionalidades
 
-- Um usuario pode ser criado, atualizado, deletado e encontrado
-- Um usuario adicionar posts contendo titulo, conteudo e data
-- Um usuario pode adicionar comentarios aos posts já existentes
-- Posts podem ser encontrados por id, titulo, conteudo ou intervalo de datas
+- Um usuário pode ser criado, atualizado, deletado e encontrado
+- Um usuário adicionar posts contendo título, conteudo e data
+- Um usuário pode adicionar comentarios aos posts já existentes
+- Posts podem ser encontrados por id, título, conteudo ou intervalo de datas
 
 ### Prerequisitos
 
